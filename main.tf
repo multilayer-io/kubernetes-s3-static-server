@@ -6,7 +6,7 @@ resource aws_s3_bucket reports {
 }
 resource "aws_s3_bucket_acl" "reports" {
   bucket = aws_s3_bucket.reports.id
-  acl    = "public-read"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_website_configuration" "reports" {
